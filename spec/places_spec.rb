@@ -8,4 +8,11 @@ describe(Places) do
       expect(test_places.location()).to(eq("Canada"))
     end
   end
+
+  describe(".all") do
+    it("list is always blank at first") do
+      expect(Places.all()).to(eq([]))
+    end  
+  end
+
 end
