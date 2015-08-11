@@ -1,4 +1,6 @@
 class Places
+  @@all_places = []
+
   define_method(:initialize) do |location|
     @location = location
   end
@@ -8,6 +10,11 @@ class Places
   end
 
   define_singleton_method(:all) do
-    []
+    @@all_places
   end
+
+  define_method(:save) do
+    @@all_places.push(self)
+  end
+
 end

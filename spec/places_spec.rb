@@ -12,7 +12,14 @@ describe(Places) do
   describe(".all") do
     it("list is always blank at first") do
       expect(Places.all()).to(eq([]))
-    end  
+    end
   end
 
+  describe("#save") do
+    it("saves the given location to the list") do
+      test_places = Places.new("America")
+      test_places.save()
+      expect(Places.all()).to(eq([test_places]))
+    end
+  end
 end
