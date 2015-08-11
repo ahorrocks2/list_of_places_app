@@ -1,7 +1,11 @@
 require('rspec')
 require('places')
 
-describe(Places) do
+ describe(Places) do
+  before() do
+    Task.clear()
+  end
+
   describe("#location") do
     it("lets you give a location you have visited") do
       test_places = Places.new("Canada")

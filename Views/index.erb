@@ -1,0 +1,18 @@
+<h1>All the places you have been</h1>
+
+<p> Here is a list that compiles everywhere you have been:</p>
+
+<ul>
+   <% @place.each() do |place| %>
+      <li><%= place.location() %></li>
+   <% end %>
+</ul>
+
+<p> Add a new location:</p>
+
+<form action="/result" method="post"
+  <label for = "location">Name of place</label>
+  <input id = "location" name="location" type="text">
+
+  <button type="submit">Send</button>
+</form>
